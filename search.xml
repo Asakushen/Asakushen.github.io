@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Markdown教程</title>
+      <link href="posts/31604/"/>
+      <url>posts/31604/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h1><p>本博客网站所有内容均以Markdown编写。</p><blockquote><p>Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。 它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p></blockquote><p>所以非常受欢迎。<br>首先是是标题，标题用</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 内容</span></span><br></pre></td></tr></table></figure><p>例如:</p><h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><p>当然你最多可以输入6个#<br>例如:</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">###### 标题6</span></span><br></pre></td></tr></table></figure><h6 id="标题6"><a href="#标题6" class="headerlink" title="标题6"></a>标题6</h6><hr><p>当然你会发现上面多了2个奇怪的框框，这个框框是代码框，这也很容易实现。只需要在不想输入代码的前后分别加上```，记得换行（回车）<br>就像这样</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">```</span></span><br><span class="line"><span class="code">这句话上下分别都有</span></span><br><span class="line"><span class="code">​```</span></span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>md也可以做出引用，在引用文前输入&gt;和空格</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这句话是引用</span></span><br></pre></td></tr></table></figure><blockquote><p>这句话是引用</p></blockquote><p>当然你可以在一个&gt;下方多加一个&gt;可以实现缩进。</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 这是第一个引用</span></span><br><span class="line">&gt;&gt; 这是第二个引用</span><br></pre></td></tr></table></figure><blockquote><p>这是第一个引用</p><blockquote><p>这是第二个引用</p></blockquote></blockquote><hr><p>上方这个分割线只需要加三个减号即  -  即可 </p><h2 id="斜体加粗-amp-斜体加粗"><a href="#斜体加粗-amp-斜体加粗" class="headerlink" title="斜体加粗&amp;斜体加粗"></a>斜体加粗&amp;斜体加粗</h2><p>文字的<em>斜体</em>和<strong>加粗</strong>以及 <strong><em>斜体并加粗</em></strong> 只需要在文字前后分别加一个、二个和三个*</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*斜体*</span>  <span class="strong">**加粗**</span>   <span class="strong">**<span class="emphasis">*斜体加粗<span class="strong">**<span class="emphasis">*</span></span></span></span></span><br></pre></td></tr></table></figure><p><em>斜体</em> and <strong>加粗</strong> and   <strong><em>斜体加粗</em></strong></p><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><p>md也可以实现超链接，比如<a href="http://2333.fit/">我的博客</a></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">点击[<span class="string">百度</span>](<span class="link">http://www.baidu.com</span>)跳转搜索</span><br></pre></td></tr></table></figure><p>点击<a href="http://www.baidu.com/">百度</a>跳转搜索</p><h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>md支持三种插入图片的方式，分别是相对路径，绝对路径，网络图片。<br>我主要说一下网络图片的插入方式，本地同理。<img src="https://i.niupic.com/images/2020/11/10/8Ydl.png" alt="img">    </p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string"> img</span>](<span class="link">https://i.niupic.com/images/2020/11/10/8Ydl.png</span>)</span><br></pre></td></tr></table></figure><p>这里括号里的是图片的直链，推荐使用<a href="https://www.niupic.com/">牛图网</a>或<a href="https://sm.ms/">sm.ms</a>两个图床。</p><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ol><li>有序排序</li><li>无序排序</li><li>就像这样</li></ol><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一行</span><br><span class="line"><span class="bullet">2.</span> 第二行</span><br></pre></td></tr></table></figure><p>后面直接按回车就行。<br>还有一中无序排序</p><ul><li>这就是无序排序</li></ul><ul><li>就像这样</li></ul><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">+</span> 这就是无序排序</span><br><span class="line"><span class="bullet">-</span> 就像这样</span><br></pre></td></tr></table></figure><p>这里+和-都可以，两种排序都可以缩进</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
