@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>原石米游社自动签到</title>
+      <link href="posts/15a3aa2a/"/>
+      <url>posts/15a3aa2a/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="原神社区自动签到"><a href="#原神社区自动签到" class="headerlink" title="原神社区自动签到"></a>原神社区自动签到</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>有一说一，原神社区签到给的是真的少，而且还是签到与游戏分离，需要单独下载米游社app，这就导致很容易忘签或根本不想签。奈何蚊子肉也是肉，如果能实现自动签到每个月也能得到少量原石、摩拉和紫色经验书。</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本项目原为GitHub上开源项目，但前段时间GitHub不让用aictions挂脚本，于是本项目孕育而生。</p><p>项目作者<a href="https://www.yindan.me/cross.html">@yindan</a> </p><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><ul><li><strong>米游社原神每日签到</strong></li><li><strong>米游社国际版(HoYoLAB)原神每日签到</strong></li><li><strong>微博超话签到</strong> 支持任意 IP 签到</li><li><strong>原神超话功能</strong> 活动监测 + 领兑换码 + 多方推送</li><li><strong>支持订阅推送</strong> 可选多种订阅方式，每天将签到结果推送给用户</li><li><strong>支持多个账号</strong> 不同账号的 Cookie 值之间用<code>#</code>分隔，如：<code>&lt;cookie1&gt;#&lt;cookie2&gt;#&lt;cookie3&gt;</code></li><li><strong>支持多个角色</strong> 支持绑定官服和B站服的米游社账号</li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>本项目支持<code>Docker</code>、<code>PyPI</code>和云函数三种安装方式，本文选择云函数。</p><h3 id="下载必要文件"><a href="#下载必要文件" class="headerlink" title="下载必要文件"></a>下载必要文件</h3><p>首先先下载<a href="https://link.jscdn.cn/sharepoint/aHR0cHM6Ly9jb29sYXBrMjUwLW15LnNoYXJlcG9pbnQuY29tLzp1Oi9nL3BlcnNvbmFsL2FzYWt1c2hlbl96enl5Y2NfdG9wL0VZTkdRVjhUWnZ0THVfcmRSSXA4c2RBQncyOFNzQ2JlRndRZTFjTllBQWlEMFE_ZT1UVDJ0SWc.zip">genshinhelper-xxx-serverless.zip，点击次数可下载</a>压缩包备用。</p><h2 id="抓取必要参数"><a href="#抓取必要参数" class="headerlink" title="抓取必要参数"></a>抓取必要参数</h2><p>进入<a href="https://bbs.mihoyo.com/ys/">米游社web官网</a>，退出登陆的账号重新登录，按F12打开开发者，选择<code>Network</code>按f5<img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/69691c.png" alt="抓包"></p><p>刷新页面，打开<code>ys\</code>后复制<code>cookies</code>所有内容备用</p><h2 id="部署云函数环境"><a href="#部署云函数环境" class="headerlink" title="部署云函数环境"></a>部署云函数环境</h2><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>本文以<a href="https://cloud.tencent.com/product/scf">腾讯云</a>举例，先登陆后点击<a href="https://console.cloud.tencent.com/scf/">云函数控制台</a>，首次使用需要授权，扫码同意即可。</p><h4 id="新建函数服务"><a href="#新建函数服务" class="headerlink" title="新建函数服务"></a>新建函数服务</h4><ol><li><p>函数服务-&gt;新建<br> <img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/2169eb.png" alt="函数服务-&gt;新建"></p></li><li><p>自定义创建<br>选择自定义创建 名称自填其他默认即可 </p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/70a757.png" alt="自定义创建"></p></li><li><p>上传zip<br>按图所示上传刚刚下载的zip压缩包 执行方法默认</p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/5c9d8e.png" alt="上传zip"></p></li><li><p>点击完成后自动跳转到云函数管理   等待部署完成</p><h4 id="编辑函数配置"><a href="#编辑函数配置" class="headerlink" title="编辑函数配置"></a>编辑函数配置</h4></li><li><p>编辑配置文件 点击图中编辑</p></li></ol><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/d5acfa.png" alt="编辑"></p><ol start="2"><li><p>修改执行超时时间为300秒</p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/1c6b42.png" alt="运行时间"></p></li><li><p>再环境变量中添加之前抓的参数</p><p>key:<code>COOKIE_MIHOYOBBS</code> value为之前抓取的cookies</p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/f59727.png" alt="环境变量"></p></li><li><p>提交保存</p><h4 id="触发管理设置"><a href="#触发管理设置" class="headerlink" title="触发管理设置"></a>触发管理设置</h4></li><li><p>打开触发管理</p><p> <img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/e2f419.png" alt="触发器"></p></li><li><p>如图创建定时触发器，名称随意，cron为每日00：01：00执行，填写内容为<code>1 0 17 * * * *</code>Cron当前以 UTC +8 中国标准时间 （China Standard Time）运行，即北京时间。</p><p> <img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/05/28/9aa901.png" alt="触发器设置"></p></li></ol><h4 id="至此全部配置完成"><a href="#至此全部配置完成" class="headerlink" title="至此全部配置完成"></a>至此全部配置完成</h4><h2 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h2><p>本项目支持多种推送方法，本文以Server酱的企业微信推送为例，将Server酱企业微信SendKey复制后以填入环境变量，key为<code>SCTKEY</code></p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>再次感谢原作者<a href="https://www.yindan.me/cross.html">@yindan</a> </p><p>感谢XiaoMiku01的 <a href="https://github.com/XiaoMiku01/miyoubiAuto">miyoubiAuto</a>.<br>感谢所有为此项目贡献代码的大佬们以及使用过该项目的小可爱：<br>@PomeloWang<br>@Celeter<br>@Arondight<br>@chenkid999<br>@xe5700<br>@Renari<br>@journey-ad<br>@aflyhorse<br>@thesadru<br>@PeterPanZH<br>@cainiaowu<br>@alwaysmiddle<br>@qianxu2001</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 原神 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>哔哩哔哩助手</title>
       <link href="posts/c079e252/"/>
       <url>posts/c079e252/</url>
