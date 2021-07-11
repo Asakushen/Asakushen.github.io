@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>IDEA入门使用</title>
+      <link href="posts/e5432e20/"/>
+      <url>posts/e5432e20/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="IntelliJ-IDEA入门使用"><a href="#IntelliJ-IDEA入门使用" class="headerlink" title="IntelliJ IDEA入门使用"></a>IntelliJ IDEA入门使用</h1><h2 id="首次启动该"><a href="#首次启动该" class="headerlink" title="首次启动该"></a>首次启动该</h2><p>首次启动界面</p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/b328d9.png" alt="第一次启动"><code>NEW Projet</code>:这个就是我们创建新项目的地方，一般出在第一次安装或者没有项目时出现这个</p><p><code>Open</code>:打开现有项目，别人拿IDE开发的，也能打开</p><p><code>Get from VSC</code>里面下拉框有：CVS , Git,TFS,Mercurial,Subversion五个选项，这是版本控制功能，很强大，可以和对应的相关网站上的项目直接克隆到本地，很是强大</p><h2 id="创建第一个项目"><a href="#创建第一个项目" class="headerlink" title="创建第一个项目"></a>创建第一个项目</h2><h3 id="第一步：我们点击-New-Projec"><a href="#第一步：我们点击-New-Projec" class="headerlink" title="第一步：我们点击 New Projec"></a>第一步：我们点击 <code>New Projec</code></h3><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/9f736b.png" alt="2"></p><p>注意一下SDK的路径是否正确</p><p>NEXT-&gt;NEXT</p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/1d13d9.png" alt="MAJAVA"></p><p>Finish即可</p><h3 id="新建包"><a href="#新建包" class="headerlink" title="新建包"></a>新建包</h3><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/827509.png" alt="新建包"></p><h4 id="新建类"><a href="#新建类" class="headerlink" title="新建类"></a>新建类</h4><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/dec192.png" alt="新建类"></p><p>新建<code>HelloWord</code>类</p><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/0748b8.png" alt="新建HelloWord类"></p><h3 id="Helloword"><a href="#Helloword" class="headerlink" title="Helloword"></a>Helloword</h3><p>代码：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.myjava.java;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/96526f.png" alt="DAIIMA"></p><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/b82e62.png" alt="RUN"></p><p>如图点击绿色右三或使用快捷键RUN</p><h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="https://cdn.jsdelivr.net/gh/Asakushen/pic/2021/07/11/82a5bb.png" alt="JIEGUO"></p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>IDEA功能远不止这些，作为一个初学者也仅仅掌握于此，关于Java和IEDA的深入学习我还在继续，此笔记未完待续…………</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习 </tag>
+            
+            <tag> Java </tag>
+            
+            <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>无论世界多么崩坏，我都只想再见到她的笑颜</title>
       <link href="posts/7821dc39/"/>
       <url>posts/7821dc39/</url>
